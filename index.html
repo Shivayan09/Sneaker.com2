@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="output.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container flex items-center justify-center mx-auto h-5 px-28 py-10 mt-10">
+            <div class="logo flex flex-1">
+                <img src="logo-img.png" alt="" class="h-40 w-40 hover:cursor-pointer">
+            </div>
+            <ul class="flex flex-1 gap-10 justify-end">
+                <li class="font-semibold hover:text-red-500 hover:font-bold cursor-pointer"><a href="#">Home</a></li>
+                <li class="font-semibold hover:text-red-500 hover:font-bold cursor-pointer"><a href="#">New</a></li>
+                <li class="font-semibold hover:text-red-500 hover:font-bold cursor-pointer"><a href="#">Cart</a></li>
+                <li class="font-semibold hover:text-red-500 hover:font-bold cursor-pointer"><a href="#">Contact Us</a></li>
+            </ul>
+            <button type="button" class="bg-red-700 ml-10 rounded-md px-3 py-1.5 text-white hover:bg-red-800 hover:text-white transition transform duration-200 hover:scale-[1.01]">
+                Login
+            </button>
+        </div>
+
+        <section class="relative">
+            <div class="container flex flex-col-reverse lg:flex-row items-center gap-14 mx-auto px-28 py-20 mt-10">
+                <div class=" flex flex-1 flex-col gap-10">
+                    <h2 class="text-red-600 font-bold text-4xl z-10">A one stop solution for sneakerheads</h2>
+                    <p class="text-gray-500 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nam inventore id voluptatum perspiciatis earum magni voluptate? Dolores, corporis libero?</p>
+                    <div class="buttons flex gap-10 flex-wrap">
+                        <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Explore</button>
+                        <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Special Deals</button>
+                    </div>
+                </div>
+                <div class="main-img flex flex-1 justify-center items-center z-10">
+                    <img src="jordan1retro2.png" alt="" class="h-90 w-90">
+                </div>
+            </div>
+            <div class="bground-design absolute rounded-l-full bg-yellow-300 top-16 right-0 h-80 w-2/4 overflow-hidden"></div>
+        </section>
+    </nav>
+</body>
+</html>
