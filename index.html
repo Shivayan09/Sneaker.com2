@@ -7,6 +7,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link href="output.css" rel="stylesheet">
+    <style>
+        @keyframes appear {
+            from {
+                opacity: 0;
+                scale: 0.3;
+            }
+            to {
+                opacity: 1;
+                scale: 1;
+            }
+        }
+        .ani {
+            animation: appear 2s linear;
+            animation-timeline: view();
+            animation-range: entry;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -32,33 +49,49 @@
                     <p class="text-gray-500 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nam inventore id voluptatum perspiciatis earum magni voluptate? Dolores, corporis libero?</p>
                     <div class="buttons flex gap-10 flex-wrap">
                         <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Explore</button>
-                        <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Special Deals</button>
+                        <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Order Now</button>
                     </div>
                 </div>
                 <div class="main-img flex flex-1 justify-center items-center z-10">
-                    <img src="jordan1retro2.png" alt="">
+                    <img src="jordan1retro2.png" alt="" class="transition transform duration-300 hover:scale-105">
                 </div>
             </div>
             <div class="bground-design absolute rounded-l-full bg-yellow-300 top-16 right-0 h-80 w-2/4 overflow-hidden"></div>
         </section>
 
-        <section class="relative">
+        <section class="relative ani">
             <div class="container flex flex-col-reverse lg:flex-row items-center gap-14 mx-auto px-28 py-20 mt-10">
                 <div class="flex flex-1 justify-center items-center z-20 relative">
-                    <img src="jordan1retro1Backup.png" alt="">
+                    <img src="jordan1retro1Backup.png" alt="" class="lg:h-72 lg:w-96 transition transform duration-300 hover:scale-105">
                 </div>
-                <div class="bground-design absolute rounded-r-full bg-red-500 top-20 left-0 h-80 w-2/4 overflow-hidden z-0"></div>
+                <div class="bground-design absolute rounded-r-full bg-red-500 top-16 left-0 h-80 w-2/4 overflow-hidden z-0"></div>
                 <div class="flex flex-1 flex-col gap-10 items-center">
                     <h2 class="text-4xl text-yellow-300 font-bold z-30">Discover your style!</h2>
                     <p class="text-gray-500 text-xl ml-5 z-30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque hic impedit expedita sed, vel non necessitatibus explicabo modi tempora dolore?</p>
                     <div class="buttons flex gap-10 flex-wrap">
                         <button type="button" class="bg-yellow-500 shadow-md rounded-md px-3 py-2 text-white hover:bg-yellow-600 transition transform duration-200 hover:scale-[1.01]">Explore</button>
-                        <button type="button" class="bg-yellow-500 shadow-md rounded-md px-3 py-2 text-white hover:bg-yellow-600 transition transform duration-200 hover:scale-[1.01]">Special Deals</button>
+                        <button type="button" class="bg-yellow-500 shadow-md rounded-md px-3 py-2 text-white hover:bg-yellow-600 transition transform duration-200 hover:scale-[1.01]">Order Now</button>
                     </div>
                 </div>
             </div>
         </section>
         
+        <section class="relative ani">
+            <div class="container flex flex-col-reverse lg:flex-row items-center gap-14 mx-auto px-28 py-20 mt-10">
+                <div class=" flex flex-1 flex-col gap-10">
+                    <h2 class="text-red-600 font-bold text-4xl px-3 py-2 z-10">A one stop solution for sneakerheads</h2>
+                    <p class="text-gray-500 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nam inventore id voluptatum perspiciatis earum magni voluptate? Dolores, corporis libero?</p>
+                    <div class="buttons flex gap-10 flex-wrap">
+                        <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Explore</button>
+                        <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Order Now</button>
+                    </div>
+                </div>
+                <div class="main-img flex flex-1 justify-center items-center z-10">
+                    <img src="jordan1retro2.png" alt="" class="transition transform duration-300 hover:scale-105">
+                </div>
+            </div>
+            <div class="bground-design absolute rounded-l-full bg-yellow-300 top-16 right-0 h-80 w-2/4 overflow-hidden"></div>
+        </section>
     </nav>
 </body>
 </html>
