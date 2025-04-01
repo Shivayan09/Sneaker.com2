@@ -10,7 +10,7 @@
     <style>
         @keyframes appear {
             from {
-                opacity: 0.7;
+                opacity: 0.6;
                 scale: 0.3;
             }
             to {
@@ -21,9 +21,62 @@
         .ani {
             animation: appear 2s linear;
             animation-timeline: view();
-            animation-range: entry;
+            animation-range: entry 10%;
         }
     </style>
+    <style>
+        @keyframes appear2 {
+            from {
+                opacity: 0.5;
+                clip-path: inset(100% 100% 0 0);
+            }
+            to {
+                opacity: 1;
+                clip-path: inset(0 0 0 0);
+            }
+        }
+        .ani2 {
+            animation: appear2 2s linear;
+            animation-timeline: view();
+            animation-range: entry 0%;
+            animation-fill-mode: backwards;
+        }
+    </style>
+    <style>
+        @keyframes unfold-left {
+            from {
+                opacity: 0.3;
+                clip-path: inset(0 100% 0 0);
+            }
+            to {
+                opacity: 1;
+                clip-path: inset(0 0 0 0);
+            }
+        }
+        @keyframes unfold-right {
+            from {
+                opacity: 0.3;
+                clip-path: inset(0 0 0 100%);
+            }
+            to {
+                opacity: 1;
+                clip-path: inset(0 0 0 0);
+            }
+        }
+        .unfold-left {
+            animation: unfold-left 2s linear;
+            animation-timeline: view();
+            animation-range: entry 0%;
+            animation-fill-mode: backwards;
+        }
+        .unfold-right {
+            animation: unfold-right 2s linear;
+            animation-timeline: view();
+            animation-range: entry 0%;
+            animation-fill-mode: backwards;
+        }
+    </style>
+    
 </head>
 <body>
     <nav>
@@ -41,57 +94,110 @@
                 Login
             </button>
         </div>
-
-        <section class="relative">
-            <div class="container flex flex-col-reverse lg:flex-row items-center gap-14 mx-auto px-28 py-20 mt-10">
-                <div class=" flex flex-1 flex-col gap-10">
-                    <h2 class="text-red-600 font-bold text-4xl px-3 py-2 z-10">A one stop solution for sneakerheads</h2>
-                    <p class="text-gray-500 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nam inventore id voluptatum perspiciatis earum magni voluptate? Dolores, corporis libero?</p>
-                    <div class="buttons flex gap-10 flex-wrap">
-                        <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Explore</button>
-                        <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Order Now</button>
-                    </div>
-                </div>
-                <div class="main-img flex flex-1 justify-center items-center z-10">
-                    <img src="jordan1retro2.png" alt="" class="transition transform duration-300 hover:scale-105">
-                </div>
-            </div>
-            <div class="bground-design absolute rounded-l-full bg-yellow-300 top-16 right-0 h-80 w-2/4 overflow-hidden"></div>
-        </section>
-
-        <section class="relative ani">
-            <div class="container flex flex-col-reverse lg:flex-row items-center gap-14 mx-auto px-28 py-20 mt-10">
-                <div class="flex flex-1 justify-center items-center z-20 relative">
-                    <img src="jordan1retro1Backup.png" alt="" class="lg:h-72 lg:w-96 transition transform duration-300 hover:scale-105">
-                </div>
-                <div class="bground-design absolute rounded-r-full bg-red-500 top-16 left-0 h-80 w-2/4 overflow-hidden z-0"></div>
-                <div class="flex flex-1 flex-col gap-10 items-center">
-                    <h2 class="text-4xl text-yellow-300 font-bold z-30">Discover your style!</h2>
-                    <p class="text-gray-500 text-xl ml-5 z-30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque hic impedit expedita sed, vel non necessitatibus explicabo modi tempora dolore?</p>
-                    <div class="buttons flex gap-10 flex-wrap">
-                        <button type="button" class="bg-yellow-500 shadow-md rounded-md px-3 py-2 text-white hover:bg-yellow-600 transition transform duration-200 hover:scale-[1.01]">Explore</button>
-                        <button type="button" class="bg-yellow-500 shadow-md rounded-md px-3 py-2 text-white hover:bg-yellow-600 transition transform duration-200 hover:scale-[1.01]">Order Now</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="relative ani">
-            <div class="container flex flex-col-reverse lg:flex-row items-center gap-14 mx-auto px-28 py-20 mt-10">
-                <div class=" flex flex-1 flex-col gap-10">
-                    <h2 class="text-red-600 font-bold text-4xl px-3 py-2 z-10">Step into the latest fashion</h2>
-                    <p class="text-gray-500 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nam inventore id voluptatum perspiciatis earum magni voluptate? Dolores, corporis libero?</p>
-                    <div class="buttons flex gap-10 flex-wrap">
-                        <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Explore</button>
-                        <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Order Now</button>
-                    </div>
-                </div>
-                <div class="main-img flex flex-1 justify-center items-center z-10">
-                    <img src="slider-img2.png" alt="" class="transition transform duration-300 hover:scale-105">
-                </div>
-            </div>
-            <div class="bground-design absolute rounded-l-full bg-yellow-300 top-16 right-0 h-80 w-2/4 overflow-hidden"></div>
-        </section>
     </nav>
+
+        <!-- main1 -->
+    <section class="relative">
+        <div class="container flex flex-col-reverse lg:flex-row items-center gap-14 mx-auto px-28 py-20 mt-10">
+            <div class=" flex flex-1 flex-col gap-10">
+                <h2 class="text-red-600 font-bold text-4xl px-3 py-2 z-10">A one stop solution for sneakerheads</h2>
+                <p class="text-gray-500 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nam inventore id voluptatum perspiciatis earum magni voluptate? Dolores, corporis libero?</p>
+                <div class="buttons flex gap-10 flex-wrap">
+                    <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Explore</button>
+                    <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Order Now</button>
+                </div>
+            </div>
+            <div class="main-img flex flex-1 justify-center items-center z-10">
+                <img src="jordan1retro2.png" alt="" class="transition transform duration-300 hover:scale-105">
+            </div>
+        </div>
+        <div class="bground-design absolute rounded-l-full bg-yellow-300 top-16 right-0 h-80 w-2/4 overflow-hidden"></div>
+    </section>
+    <!-- main2 -->
+    <section class="relative ani">
+        <div class="container flex flex-col-reverse lg:flex-row items-center gap-14 mx-auto px-28 py-20 mt-10">
+            <div class="flex flex-1 justify-center items-center z-20 relative">
+                <img src="jordan1retro1Backup.png" alt="" class="lg:h-72 lg:w-96 transition transform duration-300 hover:scale-105">
+            </div>
+            <div class="bground-design absolute rounded-r-full bg-red-500 top-16 left-0 h-80 w-2/4 overflow-hidden z-0"></div>
+            <div class="flex flex-1 flex-col gap-10 items-center">
+                <h2 class="text-4xl text-yellow-300 font-bold z-30">Discover your style!</h2>
+                <p class="text-gray-500 text-xl ml-5 z-30">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque hic impedit expedita sed, vel non necessitatibus explicabo modi tempora dolore?</p>
+                <div class="buttons flex gap-10 flex-wrap">
+                    <button type="button" class="bg-yellow-500 shadow-md rounded-md px-3 py-2 text-white hover:bg-yellow-600 transition transform duration-200 hover:scale-[1.01]">Explore</button>
+                    <button type="button" class="bg-yellow-500 shadow-md rounded-md px-3 py-2 text-white hover:bg-yellow-600 transition transform duration-200 hover:scale-[1.01]">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- main3 -->
+    <section class="relative ani">
+        <div class="container flex flex-col-reverse lg:flex-row items-center gap-14 mx-auto px-28 py-20 mt-10">
+            <div class=" flex flex-1 flex-col gap-10">
+                <h2 class="text-red-600 font-bold text-4xl px-3 py-2 z-10">Step into the latest fashion</h2>
+                <p class="text-gray-500 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, nam inventore id voluptatum perspiciatis earum magni voluptate? Dolores, corporis libero?</p>
+                <div class="buttons flex gap-10 flex-wrap">
+                    <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Explore</button>
+                    <button type="button" class="bg-red-700 shadow-md rounded-md px-3 py-2 text-white hover:bg-red-800 transition transform duration-200 hover:scale-[1.01]">Order Now</button>
+                </div>
+            </div>
+            <div class="main-img flex flex-1 justify-center items-center z-10">
+                <img src="slider-img2.png" alt="" class="transition transform duration-300 hover:scale-105">
+            </div>
+        </div>
+        <div class="bground-design absolute rounded-l-full bg-yellow-300 top-16 right-0 h-80 w-2/4 overflow-hidden"></div>
+    </section>
+    <!-- BOXES -->
+    <section class="relative">
+        <div class="container flex flex-col">
+            <div class="box h-96 bg-yellow-200 border border-black hover:border-0 transition transform duration-300 hover:scale-[1.04] w-72 mx-20 rounded-3xl flex flex-col justify-center items-center">
+                <img src="jordan-bg4-removebg-preview.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                <div class="relative z-10">
+                    <h2 class="font-bold text-3xl text-center mb-5 text-gray-600">Trendy Designs</h2>
+                    <p class="text-gray-800 text-center px-3">Stay ahead of the curve with our latest sneaker collections. Designed for both style and comfort, our sneakers ensure you always step out in confidence. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nihil est recusandae perspiciatis autem ipsam.</p>
+                </div>
+            </div>
+            <div class="bgdesign absolute h-40 top-28 w-[54%] rounded-r-full bg-yellow-300 -z-10 unfold-left"></div>
+        </div>
+    </section>
+    <section class="relative">
+        <div class="container">
+            <div class="box h-96 bg-yellow-200 border border-black hover:border-0 transition transform duration-300 hover:scale-[1.04] w-72 mx-20 rounded-3xl flex flex-col justify-center items-center ml-auto">
+                <img src="newArrival2.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                <div class="relative z-10">
+                    <h2 class="font-bold text-3xl text-center mb-5 text-gray-600">Premium Quality</h2>
+                    <p class="text-gray-800 text-center px-3">Experience top-notch craftsmanship with every pair. We use high-quality materials to deliver sneakers that are durable, stylish, and built to last. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nihil est recusandae perspiciatis autem ipsam.</p>
+                </div>
+            </div>
+            <div class="bgdesign absolute h-40 top-28 w-[54%]  right-0 rounded-l-full bg-yellow-300 -z-10 unfold-right"></div>
+        </div>
+    </section>
+            
+    <section class="relative">
+        <div class="container">
+            <div class="box h-96 bg-yellow-200 border border-black hover:border-0 transition transform duration-300 hover:scale-[1.04] w-72 mx-20 rounded-3xl flex flex-col justify-center items-center">
+                <img src="seasonal.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                <div class="relative z-10">
+                    <h2 class="font-bold text-3xl text-center mb-5 text-gray-600">Limited Editions</h2>
+                    <p class="text-gray-800 text-center px-3">Explore exclusive, limited-edition sneakers that you won't find anywhere else. Elevate your collection with rare and iconic footwear releases. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nihil est recusandae perspiciatis autem ipsam.</p>
+                </div>
+            </div>
+            <div class="bgdesign absolute h-40 top-28 w-[54%] rounded-r-full bg-yellow-300 -z-10 unfold-left"></div>
+        </div>
+    </section>
+            
+    <section class="relative mb-10">
+        <div class="container">
+            <div class="box h-96 bg-yellow-200 border border-black hover:border-0 transition transform duration-300 hover:scale-[1.04] w-72 mx-20 rounded-3xl flex flex-col justify-center items-center ml-auto">
+                <img src="jordan-bg4-removebg-preview.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                <div class="relative z-10">
+                    <h2 class="font-bold text-3xl text-center mb-5 text-gray-600">Unmatched Comfort</h2>
+                    <p class="text-gray-800 text-center px-3">Our sneakers are engineered for ultimate comfort and support, perfect for long walks, workouts, or just everyday wear. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nihil est recusandae perspiciatis autem ipsam.</p>
+                </div>
+            </div>
+            <div class="bgdesign absolute h-40 top-28 w-[54%] right-0 rounded-l-full bg-yellow-300 -z-10 unfold-right"></div>
+        </div>
+    </section>
 </body>
 </html>
